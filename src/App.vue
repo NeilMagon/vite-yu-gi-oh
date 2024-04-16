@@ -3,10 +3,12 @@ import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import CardList from './components/CardList.vue';
+import AppSearch from './components/AppSearch.vue';
 export default {
   components: {
     AppHeader,
-    CardList
+    CardList,
+    AppSearch
   },
   data() {
     return {
@@ -38,6 +40,7 @@ export default {
         <AppHeader></AppHeader>
     </header>
     <main>
+        <AppSearch></AppSearch>
         <CardList></CardList>
     </main>
 </template>
