@@ -40,7 +40,7 @@ export default {
         <AppHeader></AppHeader>
     </header>
     <main>
-        <AppSearch></AppSearch>
+        <AppSearch @searchCard="getCards"></AppSearch>
         <CardList></CardList>
     </main>
 </template>
