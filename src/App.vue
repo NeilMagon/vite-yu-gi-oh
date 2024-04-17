@@ -21,9 +21,15 @@ export default {
             num: 20,
             offset: 0
         };
+
+        if (store.selectedArchetype != '') {
+          queyParams.archetype = store.selectedArchetype
+        }
+
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php',{
             params: queyParams
         })
+        
         .then((response) => {
             this.store.cards = response.data.data;
         })
